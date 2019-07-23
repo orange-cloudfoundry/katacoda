@@ -1,6 +1,8 @@
 #swith user to CassKop directory
 sleep 20
 cd cassandra-k8s-operator
+# Force python3.7 on Katacoda
+sed -i -e 's/python3/python3.7/' plugins/kubectl-casskop
 ls -la
 
 
