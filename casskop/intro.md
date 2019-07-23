@@ -24,7 +24,7 @@ For the sake of simplicity for this hands-on, we launch each Cassandra without p
 
 CassKop will warn you in it's log with messages like 
 
-```
+```log
 level=warning msg="[cassandra-demo]: No Spec.DataCapacity was specified -> You Cluster WILL NOT HAVE PERSISTENT
 DATA!!!!!"
 ```
