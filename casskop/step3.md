@@ -34,7 +34,7 @@ you can see the log of the new Cassandra pod starting:
 
 You can follow the logs of CassKop :
 
-`kubectl logs -f $(kubectl get pods -l app=cassandra-operator -o jsonpath='{range .items[*]}{.metadata.name}{" "}')`{{execute}}
+`kubectl logs $(kubectl get pods -l app=cassandra-operator -o jsonpath='{range .items[*]}{.metadata.name}{" "}')`{{execute}}
 
 > Ctrl-C to exit
 

@@ -12,7 +12,7 @@ We can see the pods deletion with the command kubectl get pods below:
 
 We can follow the logs of CassKop with the command kubectl logs below :
 
-`kubectl logs $(kubectl get pods -l app=cassandra-operator -o jsonpath='{range .items[*]}{.metadata.name}{" "}') -f`{{execute}}
+`kubectl logs $(kubectl get pods -l app=cassandra-operator -o jsonpath='{range .items[*]}{.metadata.name}{" "}')`{{execute}}
 
 > Ctrl-C to exit
 
