@@ -1,0 +1,33 @@
+apiVersion: "db.orange.com/v1alpha1"
+kind: "CassandraCluster"
+metadata:
+  name: cassandra-demo
+  labels:
+    cluster: katacoda
+spec:
+  baseImage: orangeopensource/cassandra-image
+  version: 3.11.4-8u212-0.3.1-cqlsh
+  configMapName: cassandra-configmap-v1
+#  dataCapacity: "1Gi"                  # On Katacoda I decided to not use persistent storage has it is difficult to configure on volatil environment
+#  dataStorageClass: "local-storage"    # 
+  imagepullpolicy: IfNotPresent  
+  hardAntiAffinity: false               # Do we ensure only 1 cassandra on each node ?
+  deletePVC: true
+  autoPilot: false
+  gcStdout: false
+  autoUpdateSeedList: false             # we deactivate autoUpdateSeedList to avoid rolling restart of the cluster and save some time 
+  maxPodUnavailable: 1
+  runAsUser: 1000
+  resources:         
+    requests:
+      cpu: '1'
+      memory: 1Gi
+    limits:
+      cpu: '1'
+      memory: 1Gi
+  topology:
+    dc:
+      - name: dc1
+        nodesPerRacks: 1
+        rack:
+          - name: rack1
