@@ -6,7 +6,7 @@ metadata:
     cluster: katacoda
 spec:
   baseImage: orangeopensource/cassandra-image
-  version: 3.11.4-8u212-0.3.1-cqlsh
+  version: 3.11.4-8u212-0.3.2-cqlsh
   configMapName: cassandra-configmap-v1
 #  dataCapacity: "1Gi"                  # On Katacoda I decided to not use persistent storage has it is difficult to configure on volatil environment
 #  dataStorageClass: "local-storage"    # 

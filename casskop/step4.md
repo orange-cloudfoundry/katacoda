@@ -73,6 +73,11 @@ When the ScaleUp is Done :
 
 we can do a data cleanup using the CassKop plugin:
 
+### Install plugin in PATH
+
+`export PATH=$PATH:/root/cassandra-k8s-operator/plugins`{{execute}}
+
+### Launch the cleanup
 
 `kubectl casskop cleanup --prefix cassandra-demo-dc1`{{execute}}
 
@@ -86,8 +91,8 @@ CassKop will also update the labels on each pod; we can see that with :
  kubectl label pod cassandra-demo-dc1-rack1-$x --list | grep operation ; echo ""
 done`{{execute}}
 
-## Check Cassandra status
 
+## Check Cassandra status
 
 Let's see how Cassandra see it's 2 nodes :
 

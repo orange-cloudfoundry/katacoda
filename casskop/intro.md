@@ -1,11 +1,19 @@
-# CassKop's CRD: cassandracluster
+# CassKop: Orange's Cassandra Kubernetes operator
+
+The [CassKop](https://github.com/Orange-OpenSource/cassandra-k8s-operator) Cassandra Kubernetes operator makes it easy
+to run Apache Cassandra on Kubernetes. Apache Cassandra is a
+popular, free, open-source, distributed wide column store, NoSQL database management system. The operator allows to
+easily create and manage racks and data centers aware Cassandra clusters
+
+
+## CassKop's CRD: cassandracluster
 
 CassKop defines its own Custom Ressource Definition named **cassandracluster**
 This new k8s object allows to describe the Cassandra cluster a user wants to manage.
 We can interract directly with this new object using kubectl.
 
 
-## Configuration
+## Configuration for Katacoda
 
 We have a very small 2 nodes kubernetes cluster with 1 master and 1 node, and we have untainted the master so that it can
 get some pods scheduled.
