@@ -1,5 +1,5 @@
 #swith user to CassKop directory
-#sleep 20
+sleep 20
 cd cassandra-k8s-operator
 ls -la
 
