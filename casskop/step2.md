@@ -5,7 +5,10 @@ We are going to apply directly the crd manifest, then deploy the CassKop using h
 
 ## Deploy CassKop's operator
 
-`helm install --name casskop --set image.tag=0.3.2-master ./helm/cassandra-operator`{{execute}}
+Install CassKop helm repo:
+`helm repo add casskop https://Orange-OpenSource.github.io/cassandra-k8s-operator/helm`{{execute}}
+
+`helm install --name casskop casskop/cassandra-operator`{{execute}}
 
 Wait a few seconds for the CassKop to be up and running
 
