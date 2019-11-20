@@ -16,7 +16,7 @@ spec:
   gcStdout: false
   autoUpdateSeedList: false             # we deactivate autoUpdateSeedList to avoid rolling restart of the cluster and save some time 
   maxPodUnavailable: 1
-  runAsUser: 1000
+  runAsUser: 999
   resources:         
     requests:
       cpu: '1'
