@@ -2,6 +2,9 @@
 sleep 20
 cd cassandra-k8s-operator
 # Force python3.7 on Katacoda
+sudo add-apt-repository ppa:deadsnakes/ppa
+apt update
+apt install python3.7
 sed -i -e 's/python3/python3.7/' plugins/kubectl-casskop
 ls -la
 
